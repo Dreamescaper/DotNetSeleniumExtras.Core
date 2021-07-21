@@ -16,6 +16,7 @@
 // limitations under the License.
 // </copyright>
 
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Drawing;
@@ -81,6 +82,7 @@ namespace SeleniumExtras.PageObjects
 
         public string GetCssValue(string propertyName) => WrappedElement.GetCssValue(propertyName);
 
+        [Obsolete]
         public string GetProperty(string propertyName) => WrappedElement.GetProperty(propertyName);
 
         public void SendKeys(string text) => WrappedElement.SendKeys(text);
@@ -102,6 +104,12 @@ namespace SeleniumExtras.PageObjects
 
         public ReadOnlyCollection<IWebElement> FindElements(string mechanism, string value)
             => ((IFindsElement)WrappedElement).FindElements(mechanism, value);
+
+        public string GetDomAttribute(string attributeName) => WrappedElement.GetDomAttribute(attributeName);
+
+        public string GetDomProperty(string propertyName) => WrappedElement.GetDomProperty(propertyName);
+
+        public ISearchContext GetShadowRoot() => WrappedElement.GetShadowRoot();
 
         #endregion Forwarded WrappedElement calls
     }
