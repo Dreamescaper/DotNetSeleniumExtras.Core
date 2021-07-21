@@ -8,7 +8,7 @@
     <FileVersion>4.0.0.0</FileVersion>
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
-    <Version>4.0.0-beta1</Version>
+    <Version>4.0.0-beta4</Version>
     <PackageId>DotNetSeleniumExtras.PageObjects.Core</PackageId>
     <Authors>Dreamescaper</Authors>
     <Description>Fork of DotNetSeleniumExtras with enabled dotnet core support and other features</Description>
