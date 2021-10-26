@@ -1,9 +1,9 @@
-using System;
-using System.Collections.Generic;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using SeleniumExtras.Environment;
+using System;
+using System.Collections.Generic;
 
 namespace SeleniumExtras.PageObjects
 {
@@ -140,6 +140,15 @@ namespace SeleniumExtras.PageObjects
             driver.SwitchTo().Frame(page.Frame);
         }
 
+        [Test]
+        public void AddMultipleFindsByAttributesShouldSearchByAnyOfThem()
+        {
+            driver.Url = xhtmlTestPage;
+            var page = new Page();
+            PageFactory.InitElements(driver, page);
+            Assert.That(page.MultipleElement.GetAttribute("id"), Is.EqualTo("id1"));
+        }
+
         #region Page classes for tests
 
         private class Page
@@ -156,6 +165,11 @@ namespace SeleniumExtras.PageObjects
             [FindsBy(How = How.TagName, Using = "form", Priority = 0)]
             [FindsBy(How = How.Name, Using = "someForm", Priority = 1)]
             public IWebElement ByAllElement;
+
+            [FindsBy(How = How.Id, Using = "id-not-here")]
+            [FindsBy(How = How.Id, Using = "id1")]
+            [FindsBy(How = How.Id, Using = "id-not-here-either")]
+            public IWebElement MultipleElement;
         }
 
         private class HoverPage
