@@ -82,9 +82,6 @@ namespace SeleniumExtras.PageObjects
 
         public string GetCssValue(string propertyName) => WrappedElement.GetCssValue(propertyName);
 
-        [Obsolete]
-        public string GetProperty(string propertyName) => WrappedElement.GetProperty(propertyName);
-
         public void SendKeys(string text) => WrappedElement.SendKeys(text);
 
         public void Submit() => WrappedElement.Submit();

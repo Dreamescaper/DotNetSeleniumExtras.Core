@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28822.285
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumExtras.PageObjects", "src\PageObjects\SeleniumExtras.PageObjects.csproj", "{3288DCD2-37C6-49D1-834D-BBC0789724E4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumExtras.PageObjects.Tests", "test\PageObjects\SeleniumExtras.PageObjects.Tests.csproj", "{3478B793-37A9-4280-8801-B25D716F4A78}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumExtras.Common.Tests", "test\Common\SeleniumExtras.Common.Tests.csproj", "{2FA4FD8A-244E-43AD-9679-2FF5F85CDF4D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumExtras.WaitHelpers", "src\WaitHelpers\SeleniumExtras.WaitHelpers.csproj", "{557CD7CE-C90B-43A7-81E4-BCD770E190E3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumExtras.PageObjects.Linq", "src\PageObjects.Linq\SeleniumExtras.PageObjects.Linq.csproj", "{F224B438-F355-4FC6-AECA-F93A5EEFE329}"
 EndProject
@@ -39,10 +37,6 @@ Global
 		{2FA4FD8A-244E-43AD-9679-2FF5F85CDF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FA4FD8A-244E-43AD-9679-2FF5F85CDF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FA4FD8A-244E-43AD-9679-2FF5F85CDF4D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{557CD7CE-C90B-43A7-81E4-BCD770E190E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{557CD7CE-C90B-43A7-81E4-BCD770E190E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{557CD7CE-C90B-43A7-81E4-BCD770E190E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{557CD7CE-C90B-43A7-81E4-BCD770E190E3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F224B438-F355-4FC6-AECA-F93A5EEFE329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F224B438-F355-4FC6-AECA-F93A5EEFE329}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F224B438-F355-4FC6-AECA-F93A5EEFE329}.Release|Any CPU.ActiveCfg = Release|Any CPU

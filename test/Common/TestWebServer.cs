@@ -1,6 +1,6 @@
-﻿using System;
+﻿using EmbedIO;
+using System;
 using System.Threading.Tasks;
-using Unosquare.Labs.EmbedIO;
 
 namespace SeleniumExtras.Environment
 {
@@ -24,9 +24,8 @@ namespace SeleniumExtras.Environment
                 throw new InvalidOperationException("WebServer is already started!");
             }
 
-            webServer = WebServer
-                   .Create(url)
-                   .WithStaticFolderAt(htmlPath);
+            webServer = new WebServer(url)
+                   .WithStaticFolder("/", htmlPath, true);
             Task.Run(() => webServer.RunAsync());
         }
 
