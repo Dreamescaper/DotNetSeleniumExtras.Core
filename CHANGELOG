@@ -1,3 +1,8 @@
+4.14.1
++ Update Selenium.WebDriver package
++ Add net6.0 target framework
++ Remove net5.0 target framework
+
 4.3.0
 + Update Selenium.WebDriver package
 
