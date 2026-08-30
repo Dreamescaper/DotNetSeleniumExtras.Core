@@ -4,11 +4,11 @@
     <TargetFrameworks>net462;netstandard2.0;net6.0</TargetFrameworks>
     <AssemblyName>SeleniumExtras.PageObjects</AssemblyName>
     <RootNamespace>SeleniumExtras</RootNamespace>
-    <AssemblyVersion>4.14.1.0</AssemblyVersion>
-    <FileVersion>4.14.1.0</FileVersion>
+    <AssemblyVersion>4.15.0.0</AssemblyVersion>
+    <FileVersion>4.15.0.0</FileVersion>
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
-    <Version>4.14.1</Version>
+    <Version>4.15.0</Version>
     <PackageId>DotNetSeleniumExtras.PageObjects.Core</PackageId>
     <Authors>Dreamescaper</Authors>
     <Description>Fork of DotNetSeleniumExtras with enabled dotnet core support and other features</Description>
