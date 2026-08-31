@@ -37,6 +37,11 @@ namespace SeleniumExtras.PageObjects
         {
             var how = attribute.How;
             var usingValue = attribute.Using;
+            if (usingValue == null)
+            {
+                throw new ArgumentException("Cannot construct a By instance without a value for the Using property", nameof(attribute));
+            }
+
             switch (how)
             {
                 case How.Id:

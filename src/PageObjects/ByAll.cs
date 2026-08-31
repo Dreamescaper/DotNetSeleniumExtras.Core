@@ -98,7 +98,9 @@ namespace SeleniumExtras.PageObjects
                 }
             }
 
-            return elements.ToList().AsReadOnly();
+            return elements == null
+                ? new List<IWebElement>().AsReadOnly()
+                : elements.ToList().AsReadOnly();
         }
 
         /// <summary>

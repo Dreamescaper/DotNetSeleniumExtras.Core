@@ -33,7 +33,9 @@ namespace SeleniumExtras.Environment
             List<Type> constructorArgTypeList = new List<Type>();
             if (typeof(ChromeDriver).IsAssignableFrom(driverType))
             {
-                ChromeDriverService service = ChromeDriverService.CreateDefaultService(this.DriverServicePath);
+                // Let Selenium Manager download the chromedriver matching the installed Chrome,
+                // rather than relying on a pinned driver that drifts as Chrome updates.
+                ChromeDriverService service = ChromeDriverService.CreateDefaultService();
                 service.HostName = host;
                 constructorArgTypeList.Add(typeof(ChromeDriverService));
                 ConstructorInfo ctorInfo = driverType.GetConstructor(constructorArgTypeList.ToArray());

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net472;net6.0</TargetFrameworks>
+    <TargetFrameworks>net472;net8.0</TargetFrameworks>
     <AssemblyName>SeleniumExtras.PageObjects.Tests</AssemblyName>
     <RootNamespace>SeleniumExtras.PageObjects</RootNamespace>
   </PropertyGroup>
@@ -22,7 +22,6 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="152.0.7977.6400" />
   </ItemGroup>
 
   <ItemGroup>

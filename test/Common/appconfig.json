@@ -14,21 +14,21 @@
   "DriverConfigs": {
     "Chrome": {
       "DriverTypeName": "OpenQA.Selenium.Chrome.ChromeDriver",
-      "AssemblyName": "WebDriver",
+      "AssemblyName": "Selenium.WebDriver",
       "BrowserValue": "Chrome",
       "RemoteCapabilities": "chrome"
     },
 
     "IE": {
       "DriverTypeName": "OpenQA.Selenium.IE.InternetExplorerDriver",
-      "AssemblyName": "WebDriver",
+      "AssemblyName": "Selenium.WebDriver",
       "BrowserValue": "IE",
       "RemoteCapabilities": "internet explorer"
     },
 
     "Edge": {
       "DriverTypeName": "OpenQA.Selenium.Edge.EdgeDriver",
-      "AssemblyName": "WebDriver",
+      "AssemblyName": "Selenium.WebDriver",
       "BrowserValue": "Edge",
       "RemoteCapabilities": "MicrosoftEdge"
     },
@@ -56,7 +56,7 @@
 
     "Safari": {
       "DriverTypeName": "OpenQA.Selenium.Safari.SafariDriver",
-      "AssemblyName": "WebDriver",
+      "AssemblyName": "Selenium.WebDriver",
       "BrowserValue": "Safari",
       "RemoteCapabilities": "safari"
     },

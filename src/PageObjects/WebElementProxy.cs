@@ -78,7 +78,7 @@ namespace SeleniumExtras.PageObjects
 
         public ReadOnlyCollection<IWebElement> FindElements(By by) => WrappedElement.FindElements(by);
 
-        public string GetAttribute(string attributeName) => WrappedElement.GetAttribute(attributeName);
+        public string? GetAttribute(string attributeName) => WrappedElement.GetAttribute(attributeName);
 
         public string GetCssValue(string propertyName) => WrappedElement.GetCssValue(propertyName);
 
@@ -102,9 +102,9 @@ namespace SeleniumExtras.PageObjects
         public ReadOnlyCollection<IWebElement> FindElements(string mechanism, string value)
             => ((IFindsElement)WrappedElement).FindElements(mechanism, value);
 
-        public string GetDomAttribute(string attributeName) => WrappedElement.GetDomAttribute(attributeName);
+        public string? GetDomAttribute(string attributeName) => WrappedElement.GetDomAttribute(attributeName);
 
-        public string GetDomProperty(string propertyName) => WrappedElement.GetDomProperty(propertyName);
+        public string? GetDomProperty(string propertyName) => WrappedElement.GetDomProperty(propertyName);
 
         public ISearchContext GetShadowRoot() => WrappedElement.GetShadowRoot();
 
