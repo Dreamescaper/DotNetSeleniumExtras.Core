@@ -1,0 +1,49 @@
+name: NuGet packages
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      # Only the packable projects are built. The solution is not used, so that
+      # the test projects -- which still target .NET Framework, and would need a
+      # Windows runner -- stay out of the way, and so that they don't end up
+      # packed as packages of their own.
+      - name: Restore
+        run: |
+          dotnet restore src/PageObjects/SeleniumExtras.PageObjects.csproj
+          dotnet restore src/PageObjects.Linq/SeleniumExtras.PageObjects.Linq.csproj
+
+      - name: Build
+        run: |
+          dotnet build src/PageObjects/SeleniumExtras.PageObjects.csproj --configuration Release --no-restore
+          dotnet build src/PageObjects.Linq/SeleniumExtras.PageObjects.Linq.csproj --configuration Release --no-restore
+
+      # --no-build is required: the projects set GeneratePackageOnBuild, and
+      # letting pack drive the build races the multi-targeted output (NU5026).
+      - name: Pack
+        run: |
+          dotnet pack src/PageObjects/SeleniumExtras.PageObjects.csproj --configuration Release --no-build --output artifacts
+          dotnet pack src/PageObjects.Linq/SeleniumExtras.PageObjects.Linq.csproj --configuration Release --no-build --output artifacts
+
+      - name: Upload packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: nuget-packages
+          path: artifacts/*.nupkg
+          if-no-files-found: error
+          retention-days: 30

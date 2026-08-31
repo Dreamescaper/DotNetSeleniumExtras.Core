@@ -1,8 +1,9 @@
 4.48.0
 + Update Selenium.WebDriver package to 4.48.0
 + Replace net6.0 target framework with net8.0
++ Remove net462 target framework; netstandard2.0 covers .NET Framework 4.6.2+
 + Remove TunnelVisionLabs.ReferenceAssemblyAnnotator dependency, and declare the
-  nullable analysis attributes internally for net462 and netstandard2.0 instead
+  nullable analysis attributes internally for netstandard2.0 instead
 + Annotate WebElementProxy.GetAttribute, GetDomAttribute and GetDomProperty as
   returning a nullable string, matching IWebElement
 + ByFactory now throws ArgumentException when FindsByAttribute.Using is not set
